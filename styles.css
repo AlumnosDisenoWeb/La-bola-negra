@@ -1,0 +1,556 @@
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e4d5b7;
+    color: #241b16;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =====================================
+   MENÚ
+===================================== */
+
+nav {
+    background-color: #211a16;
+
+    padding: 20px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 4px solid #a98954;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #d2b477;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.menu a {
+    color: #e4d5b7;
+
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #e9a09a;
+}
+
+
+/* =====================================
+   PORTADA
+===================================== */
+
+.hero {
+    min-height: 800px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+        linear-gradient(
+            rgba(25, 18, 14, 0.75),
+            rgba(25, 18, 14, 0.92)
+        ),
+        radial-gradient(
+            circle,
+            #665444,
+            #211a16
+        );
+
+    border-bottom: 8px double #a98954;
+}
+
+.hero-contenido {
+    max-width: 850px;
+}
+
+
+/* =====================================
+   CARTEL
+===================================== */
+
+.poster {
+    width: 300px;
+
+    max-width: 90%;
+
+    border: 8px solid #211a16;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.7);
+
+    margin-bottom: 35px;
+
+    transition: 0.4s;
+}
+
+.poster:hover {
+    transform: scale(1.03) rotate(-1deg);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.85);
+}
+
+
+/* =====================================
+   TÍTULO PRINCIPAL
+===================================== */
+
+.hero h1 {
+    color: #e9a09a;
+
+    font-size: 75px;
+
+    line-height: 1;
+
+    letter-spacing: 10px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        3px 3px #211a16,
+        0 0 15px #000;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    color: #e1d0ad;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    font-style: italic;
+}
+
+
+/* =====================================
+   BOTÓN
+===================================== */
+
+.boton {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 15px 35px;
+
+    background-color: #a98954;
+
+    color: #211a16;
+
+    text-decoration: none;
+
+    border: 2px solid #211a16;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #211a16;
+
+    color: #e9a09a;
+
+    transform: scale(1.05);
+}
+
+
+/* =====================================
+   SECCIONES
+===================================== */
+
+section {
+    padding: 80px 10%;
+
+    border-bottom: 1px solid #b49b70;
+}
+
+.titulo {
+    text-align: center;
+
+    font-size: 38px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #35261e;
+
+    margin-bottom: 45px;
+}
+
+.titulo::after {
+    content: "✦";
+
+    display: block;
+
+    color: #a98954;
+
+    margin-top: 12px;
+
+    font-size: 20px;
+}
+
+
+/* =====================================
+   SINOPSIS
+===================================== */
+
+.sinopsis {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    line-height: 2;
+
+    color: #46382e;
+
+    font-style: italic;
+}
+
+
+/* =====================================
+   INFORMACIÓN
+===================================== */
+
+.info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.dato {
+    width: 220px;
+
+    padding: 30px 20px;
+
+    background-color: #d6c39f;
+
+    border: 2px solid #80673f;
+
+    outline: 1px solid #b49b70;
+
+    outline-offset: -8px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.dato:hover {
+    transform: translateY(-7px);
+
+    background-color: #cbb589;
+}
+
+.dato h3 {
+    color: #5a4128;
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================
+   TEXTO DE AYUDA
+===================================== */
+
+.texto-ayuda {
+    text-align: center;
+
+    color: #695748;
+
+    margin-top: -25px;
+
+    margin-bottom: 35px;
+
+    font-style: italic;
+}
+
+
+/* =====================================
+   REPARTO
+===================================== */
+
+.personajes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.personaje {
+    background-color: #d6c39f;
+
+    width: 250px;
+
+    padding: 30px 20px;
+
+    border: 2px solid #80673f;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.personaje:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 10px 20px
+        rgba(40, 25, 15, 0.35);
+
+    background-color: #cbb589;
+}
+
+.circulo {
+    width: 105px;
+    height: 105px;
+
+    margin: 0 auto 20px;
+
+    background-color: #211a16;
+
+    border: 4px double #c4a15e;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+}
+
+.personaje h3 {
+    color: #35261e;
+
+    margin-bottom: 12px;
+}
+
+.personaje p {
+    color: #59483a;
+
+    font-style: italic;
+}
+
+
+/* =====================================
+   ÉPOCAS
+===================================== */
+
+.epocas {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.epoca {
+    background-color: #d6c39f;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #80673f;
+
+    border-left: 8px solid #80673f;
+
+    transition: 0.3s;
+}
+
+.epoca:hover {
+    transform: translateX(8px);
+
+    background-color: #cbb589;
+}
+
+.epoca h3 {
+    color: #5a4128;
+
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.epoca p {
+    color: #4d3b2d;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+.pie {
+    background-color: #17110d;
+
+    color: #f0c0b5;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    border-top: 4px solid #8f7560;
+}
+
+.pie-contenido {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.pie h2 {
+    font-size: 42px;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 15px;
+
+    color: #e9a09a;
+
+    text-shadow: 2px 2px 5px #000;
+}
+
+.pie p {
+    color: #d8c4b5;
+
+    font-size: 17px;
+
+    font-style: italic;
+}
+
+.separador {
+    width: 100px;
+
+    height: 2px;
+
+    background-color: #b48f6a;
+
+    margin: 25px auto;
+}
+
+.creditos {
+    font-size: 15px !important;
+
+    color: #bfa99b !important;
+}
+
+.copyright {
+    margin-top: 25px;
+
+    font-size: 13px !important;
+
+    color: #89776d !important;
+}
+
+
+/* =====================================
+   MÓVIL
+===================================== */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .menu a {
+        margin: 0 8px;
+
+        font-size: 13px;
+    }
+
+    .poster {
+        width: 240px;
+    }
+
+    .hero {
+        min-height: 700px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+
+        letter-spacing: 5px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 55px 20px;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+}
+
